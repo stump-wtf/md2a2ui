@@ -1,4 +1,4 @@
-module stump.wtf/md2a2ui
+module github.com/joestump/md2a2ui
 
 go 1.26.5
 
