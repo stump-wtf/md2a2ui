@@ -1,5 +1,5 @@
-module github.com/joestump/md2a2ui
+module gitea.stump.rocks/stump.wtf/md2a2ui
 
 go 1.26.5
 
-require github.com/yuin/goldmark v1.8.5 // indirect
+require github.com/yuin/goldmark v1.8.5

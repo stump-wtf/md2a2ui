@@ -5,7 +5,7 @@ Go library that converts Markdown to [A2UI](https://a2ui.org) component trees us
 ## Install
 
 ```bash
-go get stump.wtf/md2a2ui
+go get gitea.stump.rocks/stump.wtf/md2a2ui
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ import (
     "encoding/json"
     "fmt"
     
-    "stump.wtf/md2a2ui"
+    "gitea.stump.rocks/stump.wtf/md2a2ui"
 )
 
 func main() {
