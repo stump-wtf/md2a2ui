@@ -14,8 +14,8 @@ import (
 
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/ast"
-	extensionAST "github.com/yuin/goldmark/extension/ast"
 	"github.com/yuin/goldmark/extension"
+	extensionAST "github.com/yuin/goldmark/extension/ast"
 	"github.com/yuin/goldmark/text"
 )
 
@@ -26,7 +26,7 @@ const Version = "v0.9"
 // updateComponents payload. Marshal it to JSON and send it to a renderer
 // that already has a surface created.
 type Message struct {
-	Version         string           `json:"version"`
+	Version          string            `json:"version"`
 	UpdateComponents *UpdateComponents `json:"updateComponents"`
 }
 
@@ -41,16 +41,16 @@ type UpdateComponents struct {
 // Only the fields relevant to the markdown→A2UI mapping are included;
 // the struct uses omitempty on optional fields so the JSON stays clean.
 type Component struct {
-	ID         string   `json:"id"`
-	Component  string   `json:"component"`
-	Text       string   `json:"text,omitempty"`
-	Variant    string   `json:"variant,omitempty"`
-	Children   []string `json:"children,omitempty"`
-	Child      string   `json:"child,omitempty"`
-	Axis       string   `json:"axis,omitempty"`
-	URL        string   `json:"url,omitempty"`
-	AltText    string   `json:"altText,omitempty"`
-	Direction  string   `json:"direction,omitempty"`
+	ID        string   `json:"id"`
+	Component string   `json:"component"`
+	Text      string   `json:"text,omitempty"`
+	Variant   string   `json:"variant,omitempty"`
+	Children  []string `json:"children,omitempty"`
+	Child     string   `json:"child,omitempty"`
+	Axis      string   `json:"axis,omitempty"`
+	URL       string   `json:"url,omitempty"`
+	AltText   string   `json:"altText,omitempty"`
+	Direction string   `json:"direction,omitempty"`
 }
 
 // Convert parses markdown and returns a complete updateComponents A2UI
@@ -483,5 +483,3 @@ func (m *Message) EnsureRootValid() error {
 	}
 	return nil
 }
-
-
