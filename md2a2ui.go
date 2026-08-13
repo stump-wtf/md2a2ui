@@ -341,6 +341,7 @@ func (b *builder) convertTable(n *extensionAST.Table, reader text.Reader) string
 			ID:        rowID,
 			Component: "Row",
 			Children:  cellIDs,
+			Direction: "horizontal",
 		})
 
 		// Mark first row as header by checking if it's inside a thead.
