@@ -265,6 +265,21 @@ func TestConvert_Table(t *testing.T) {
 	}
 }
 
+func TestConvert_TableRowDirection(t *testing.T) {
+	msg, err := Convert("| A | B |\n|---|---|\n| 1 | 2 |")
+	if err != nil {
+		t.Fatalf("Convert() error = %v", err)
+	}
+
+	for _, c := range msg.UpdateComponents.Components {
+		if c.Component == "Row" {
+			if c.Direction != "horizontal" {
+				t.Errorf("expected Row direction 'horizontal', got %q", c.Direction)
+			}
+		}
+	}
+}
+
 func TestConvert_EmptyString(t *testing.T) {
 	msg, err := Convert("")
 	if err != nil {
