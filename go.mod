@@ -1,4 +1,4 @@
-module gitea.stump.rocks/stump.wtf/md2a2ui
+module github.com/stump-wtf/md2a2ui
 
 go 1.26.5
 
